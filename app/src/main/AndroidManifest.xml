@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.camant.com.elibraryandroid">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.CategoriesActivity"
+            android:label="@string/library">
+            <intent-filter>
+                <action android:name="com.camant.android.elibrary.activity.CATEGORIES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".srv.ELibraryScheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.camant.android.elibrary.action.SYNC_NOW" />
+                <action android:name="com.camant.android.elibrary.action.SYNC_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activities.PDFViewActivity" />
+        <activity android:name=".activities.BooksListActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            -->
+        </activity>
+        <activity android:name=".activities.MuPDFActivity" />
+
+        <provider
+            android:name=".adapters.BooksSuggestionProvider"
+            android:authorities="android.camant.com.elibraryandroid.adapters.books.suggestion_Provider"
+            android:syncable="false" />
+
+        <activity android:name=".activities.BaseActivity"></activity>
+        <activity android:name=".activities.CategoriesFragmentActivity"/>
+    </application>
+
+</manifest>

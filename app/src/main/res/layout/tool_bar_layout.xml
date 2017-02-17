@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:contentInsetStart="0dp"
+    app:contentInsetStart="0dp"
+    android:background="@drawable/toolbar_bg"
+    android:id="@+id/toolbar">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:layout_gravity="start|center_vertical"
+        android:visibility="gone"
+        android:text="@string/back"
+        android:background="@drawable/button_bg"
+        android:drawablePadding="2dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:minWidth="0dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:drawableStart="@drawable/ic_back"/>
+</android.support.v7.widget.Toolbar>

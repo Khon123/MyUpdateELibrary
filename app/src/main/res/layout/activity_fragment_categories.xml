@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_categories"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingTop="0dp"
+    tools:context="android.camant.com.elibraryandroid.activities.CategoriesActivity">
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabHost"/>
+    <GridLayout
+        android:id="@+id/tabHost"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbLibrary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_tab_bg_no_sep"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:drawableTop="@drawable/ic_globe"
+                android:text="@string/library"
+                android:textSize="@dimen/tab_text_size" />
+            <RadioButton
+                android:id="@+id/rbDownloaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_tab_bg_no_sep"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:drawableTop="@drawable/ic_download"
+                android:text="@string/downloaded"
+                android:textSize="@dimen/tab_text_size" />
+            <RadioButton
+                android:id="@+id/rbMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_tab_bg_no_sep"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:drawableTop="@drawable/ic_more_apps"
+                android:text="@string/more"
+                android:textSize="@dimen/tab_text_size" />
+        </RadioGroup>
+    </GridLayout>
+</RelativeLayout>

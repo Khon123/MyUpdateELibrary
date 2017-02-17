@@ -1,0 +1,8 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.camant.com.elibraryandroid.fragments.MaterialFragment"
+    android:id="@+id/childContainer">
+
+</FrameLayout>

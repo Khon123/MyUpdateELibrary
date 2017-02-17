@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HML</string>
+    <string name="search_hint">Search</string>
+    <string name="library">Library</string>
+    <string name="downloading_book_file">Downloading Book File</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="download_failed">Download failed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="back">Back</string>
+</resources>
